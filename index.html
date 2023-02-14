@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hi</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+		@import url("https://font.elice.io/EliceDigitalCoding.css");
+		html{scroll-behavior:smooth;}
+		body{margin: 0; font-family: 'Noto Sans KR'; cursor: url("img/pointer.png") 0 0,auto;}
+		img{pointer-events: none;}
+		p{position: relative; z-index: 3; margin: 0; word-break: keep-all;}
+		input{display: none;}
+		a{text-decoration: none; cursor: url(img/pointer2.png) 20 30, auto;}
+		ol{margin: 0; padding-inline-start: 0px; word-break: keep-all;}
+
+		/*font*/
+		.noto100{font-weight: 100;}
+		.noto300{font-weight: 300;}
+		.noto400{font-weight: 400;}
+		.noto500{font-weight: 500;}
+		.noto700{font-weight: 700;}
+		.noto900{font-weight: 900;}
+
+		.txtcenter{text-align: center;}
+		.txtright{text-align: right;}
+
+		.font12{font-size: 12px;}
+		.font15{font-size: 15px;}
+		.font16{font-size: 16px;}
+		.font18{font-size: 18px;}
+		.font20{font-size: 20px;}
+		.font23{font-size: 23px;}
+		.font25{font-size: 25px;}
+		.font28{font-size: 28px;}
+		.font30{font-size: 30px;}
+		.font35{font-size: 35px;}
+		.msg{font-family: 'Elice Digital Coding', 'monospace'; font-size: 18pt; letter-spacing: -0.13rem; color:white;}
+		.msg2{font-family: 'Elice Digital Coding', 'monospace'; font-size: 13pt; letter-spacing: -0.13rem; color:white;}
+		.font-e{font-family: 'Elice Digital Coding', 'monospace';}
+		.web1news{padding-left: 20px; padding-right: 20px; word-break: keep-all;}
+		
+
+		/*fontcolor*/
+		.textwhite{color: white;}
+		.textgray{color: #A3A3A3;}
+
+		/*background*/
+		.h35{height: 35px;}
+		.h50{height: 50px;}
+		.height1{height: 1024px;}
+		.height1-5{height: 1400px;}
+		.height2{height: 2048px;}
+		.height2-5{height: 2424px;}
+		.height3{height: 3072px;}
+		.width0{width: 1062px;}
+		.width1{width: 1280px;}
+		.width-h{width: 620px;}
+		.white{background: white;}
+		.black{background: black;}
+		.yellow{background: #FFCC00;}
+	
+		/*elements*/
+		/*웹*/
+		.web{width:1165px; margin-left: 57px; margin-right: 57px; position: absolute; top: 62px; z-index: 1;}
+		.webline1{width: 1062px; height: 171px; border-bottom: 1px solid; position: absolute; left: 109px; top: 0px;}
+		.webline2{width: 1062px; height: 116px; border-bottom: 1px solid #7A7A7A;}
+
+
+		/*웹-뮤투브,정보 여백*/
+		.web-r-txt{padding-left: 16px;}
+		#mtbinfo{animation: beyellow 0.5s infinite alternate; z-index: 0;}
+		@keyframes beyellow{from{opacity: 0.5;}} to{opacity: 1;}
+
+		.clickred{opacity: 0;}
+		#mtbinfo0{text-decoration: none;}
+		#mtbinfo0:visited{color: black;}
+		#mtbinfo0:hover ~ .clickred{opacity: 1;}
+		#puppytv0:hover ~ .clickred{opacity: 1;}
+
+
+		/*말풍선*/
+		.aiballoon{width:658px; margin:0; position: absolute; z-index: 2;}
+		.aiballoon2{width:658px; margin:0; position: absolute; z-index: 2; bottom: 127px; left: 186px;}
+		.aiballoon3{width:658px; margin:0; position: absolute; z-index: 2; top: 120px;}
+		.meballoon{width:658px; margin:0; position: absolute; bottom: 0; right: 0;z-index: 2;}
+		.balloontxt{width: 658px; height: 159px; margin: 0; position: absolute;}
+		.balloontxt2{width: 658px; height: 159px; margin: 0; position: absolute; bottom: 127px; left: 186px;}
+
+		#aimsg1{animation: msgappear 1.2s cubic-bezier(.49,.12,.34,1.44);}
+		@keyframes msgappear{from{top: -160px;} to{top: 0px;}}
+
+		/*웹1-박스-1,2페이지*/
+		.mtbbox{margin-left:9px; margin-right: 9px;width: 162px; border:solid 1px; font-size: 18px;}
+		.mtbimg1{height: 162px; border-bottom: 1px solid; background-image: url(img/vid1.png); background-size:cover ;}
+		.mtbimg2{height: 162px; border-bottom: 1px solid; background-image: url(img/vid2.png); background-size:cover ;}
+
+		nav li{width: 90px; height: 39px;display: inline-block; font-size: 16pt; text-align: center; padding-top: 6px;}
+		nav li:hover {background-color: black; color: white;}
+
+		/*뮤투브-영상페이지1-박스-3페이지*/
+		.mtbbox2{width:341px; height:192px; margin-top:36px; margin-right:19.5px;}
+		#msgalert{text-decoration: none; color: black;}
+		#msgalert-1{display: none;} 
+		#msgalert:hover + #msgalert-1{display: block;}
+
+		/*폰1-4페이지*/
+		.msgtxt{padding-top: 10px;}
+		.msglist{height: 71px;}
+
+		#msgad1-2{display: none;}
+		#msgad1-1:hover + #msgad1-2{display: block;}
+
+		#msglist1{text-decoration: none; color: black;}
+
+		#msglist1-1{display: none;}
+		#msglist1:hover + #msglist1-1{display: block;}
+
+		/*폰2-5페이지*/
+		.mechat{border: solid 1px; border-radius: 18px; background-color: white; text-align: center;}
+		.mingchat{border: solid 1px; border-radius: 18px; background-color: white; text-align: center;}
+		.chatmargin{padding-top: 2px; padding-bottom: 5px;}
+
+		#sendbutton2{display: none;}
+		#sendbutton:hover{background-color: black; color: white; border: solid 1px black;} 
+		#sendbutton:hover + #sendbutton2{display: block;}
+		
+
+		/*5.5페이지*/
+		.commentimg1{border-radius: 35px;width:71px; height: 71px; background-image: url(img/pfp5.png); background-size:cover;}
+		.commenttxt1{padding-left:10px; padding-top:10px;width: 619px;}
+		.commentimg2{border-radius: 35px;width:71px; height: 71px; background-image: url(img/pfp2.png); margin: 0; background-size:cover;}
+		.commenttxt2{padding-left:10px; padding-top:10px;width: 619px;}
+
+
+		/*뮤투브 영상페이지2-박스-6페이지*/
+		.mtbbox3{width: 346px;}
+		.mtbbox4{width:341px; height:192px;}
+		.mtb-hover{z-index:0;top: 0; transition: all ease 2s;}
+
+		#mtb1-2{display: none;}
+		#mtb1-1:hover + #mtb1-2{display: block; transition: 3s;}
+		#mtb2-2{display: none;}
+		#mtb2-3{display: none;}
+		#mtb2-1:hover + #mtb2-2{display: block;}
+		#mtb2-1:hover ~ #mtb2-3{display: block;}
+		#mtb3-2{display: none;}
+		#mtb3-1:hover + #mtb3-2{display: block;}
+		#mtb4-2{display: none;}
+		#mtb4-1:hover + #mtb4-2{display: block;}
+		#mtb5-2{display: none;}
+		#mtb5-1:hover + #mtb5-2{display: block;}
+		#mtb6-2{display: none;}
+		#mtb6-1:hover + #mtb6-2{display: block;}
+
+		#mtbthumb{color: black;}
+
+		/*뉴스페이지-8페이지*/
+		/*언론사정보*/
+		.press{margin-left: 10px; margin-right: 10px;}
+		.pressbutton{padding: 4px; background-color: #FFCC00; border: solid 1px; border-radius: 18px;width: 127px; margin-bottom: 10px; text-align: center;}
+		.yn-margin{margin-top: 10px; margin-bottom: 10px;}
+		#ynbutton:hover{background-color: white; color: black;}
+		.mainnews{width:220px; font-weight: 500;}
+		.mainpress{width: 70px;}
+
+		#mainnews3-2{display: none;}
+		#mainnews3-1:hover + #mainnews3-2{display: block;}
+		.headlines{margin-left: 15px; padding-top: 10px;}
+
+		.newsblink1{height: 49px; width:295px; left:442px; background-color:#FFCC00;}
+		.newsblink2{height: 29px; width:295px; left:442px; background-color:#FFCC00;}
+
+
+		/*구덩이-10페이지*/
+		.aimechat{width: 640px; z-index:0; left:calc(50% - 310px)}
+
+		/*setting*/
+		.bor-bottom{border-bottom: solid 1px;}
+		.bor-bottom-w{border-bottom: solid 1px white;}
+		.bor-left{border-left: solid 1px;}
+		.bor-right{border-right: solid 1px;}
+		.bor-top{border-top: solid 1px;}
+		.bor-lr{border-left: solid 1px; border-right: solid 1px;}
+		.bor-lr-w{border-left: solid 1px white; border-right: solid 1px white;}
+		.bor-all{border: solid 1px;}
+		.bor-all-w{border: solid 1px white;}
+		.bor-18{border-radius: 18px;}
+		.bor-25{border-radius: 25px;}
+
+		.margin0{margin: 0;}
+		.marginauto{margin: auto;}
+		.margin-t-10{margin-top: 10px;}
+		.margin-t-15{margin-top: 15px;}
+		.margin-b-10{margin-bottom: 10px;}
+
+		.flex{display: flex;}
+		.relative{position: relative;}
+		.absolute{position: absolute;}
+		
+		.web1grid{height: 423.5px; width: 664px; margin: auto; border-bottom: 1px solid #CECECE; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr 1fr;}	
+
+
+	</style>
+</head>
+<body>
+	<!-- 1페이지 -->
+	<section class="black">
+		<!-- 검색페이지1 -->
+		<div class="height1 white relative marginauto width1 bor-lr-w">
+			<img src="img/web.png" class="web">
+
+			<!-- ai 말풍선 -->
+			<div class="absolute" style="z-index: 3;" id="aimsg1">
+			<img src="img/ai3.png" class="aiballoon">
+			<div class="balloontxt">
+				<p class="msg txtcenter aimsg" style="padding-top: 62px;"> Oh. You’re interested in Kim Meong Moong!</p>
+			</div>
+			</div>
+
+			<!-- me 말풍선 -->
+			<img src="img/me3.png" class="meballoon">
+			<div class="balloontxt" style="bottom: 0; right: 0;">
+				<p class="msg txtcenter" style="padding-top:53px;">Hmm.. well. I just searched for no reason.</p>
+			</div>
+			
+
+			<!-- 검색창 -->
+			<div class="webline1 flex relative">
+				<p class="font25" style="padding-top: 128px;">Kim Meong Moong</p>
+				<img src="img/search.png" style="width:57px; height:57px; position: absolute;right:0;bottom: 0;">
+			</div>
+
+			<!-- 메뉴 -->
+			<div class="flex marginauto width0" style="height:44px; margin-top: 28px; border: black solid 1px;">
+				<nav>
+					<li class="font20" style="background: black; color: white;">All</li>
+					<li class="font20">News</li>
+					<li class="font20">Images</li>
+					<li class="font20">Videos</li>
+					<li class="font20">Maps</li>
+					<li class="font20">Books</li>
+					<li class="font20">Finance</li>
+				</nav>
+			</div>
+
+			<!-- 기본 정보 -->
+			<div class="marginauto width0">
+				<div class="webline2">
+				<p class="font28 noto700" style="padding-left: 22px; margin-top: 0; padding-top: 19px; margin-bottom: 2px;">Kim Meong Moong</p>
+				<p style="margin: 0;padding-left: 22px; font-size: 17pt;">Representative of Puppy party</p>
+				</div>
+				
+			</div>
+			<div class="flex marginauto width0" style="height: 574px; margin-top: 10px;">
+				<!-- 뉴스/SNS -->
+				<div style="width:697px;height:558px;">
+					<div class="web1grid">
+						<div style="grid-column: 1/2; grid-row: 1/4;">
+							<img src="img/news1.png" style="width:332px;">
+						</div>
+						<div style="grid-column: 1/2; grid-row: 4/5;">
+							<p class="font15 web1news noto500">DogNews</p>
+							<p class="font18 web1news">[D-10] ‘Dog vs Cat election’ is just around the corner</p>
+						</div>
+						<div style="grid-column: 2/3; grid-row:1/2">
+							<img src="img/news2.png" style="width:332px;">
+						</div>
+						<div style="grid-column: 2/3; grid-row: 2/4;">
+							<p class="font15 web1news noto500" style="padding-top: 6px;">MeowNews</p>
+							<p class="font18 web1news">The first day of the ‘Dog vs Cat’ campaign.</p>
+							<img src="img/news3.png" style="width:332px;">
+
+						</div>
+						<div style="grid-column: 2/3; grid-row: 4/5; ">
+							<p class="font15 web1news noto500">BowwowNews</p>
+							<p class="font18 web1news">[Live] Puppy Party’s ‘Kim Meong Moong’ campaign site</p>
+							<p class="font15 textgray web1news txtright">12 hours ago</p>
+						</div>
+					</div>
+					<div style="padding-left: 22px; padding-top:23px;">
+						<p class="font15">churrbook.com/meongmoong</p>
+						<p class="font25">Kim Meong Moong</p>
+						<p class="font18 noto300" style="padding-left:22px;">Kim Meong Moong.Follower 2230980 Likes 22052612345</p>
+					</div>
+				</div>
+
+				<!-- 뮤투브/정보 -->
+				<div style="width:366px;height:558px; border-left:solid 1px #CECECE;">
+					<div class="marginauto" style="width:359px;">
+						<div style="margin-bottom: 10px;">
+						<p class="font18 web-r-txt">Myoutube.com/meongmoong</p>
+						<p class="font25 web-r-txt noto700">Kim Meong Moong TV</p>
+						<p class="font15 textgray txtright">More ></p>
+						</div>
+
+						<div class="flex" style="width:370px;">
+							<div style="width:4px;">
+							</div>
+							<div class="mtbbox">
+							<div class="mtbimg1"></div>
+							<div style="margin-top:2px;margin-left:5px; margin margin-right: 5px; margin-bottom: 5px;">
+							<p>Meong Moong’s snack MUKBANG</p>
+							</div>
+							</div>
+
+							<div class="mtbbox">
+								<div class="mtbimg2"></div>
+								<div style="margin-top:2px;margin-left:5px; margin margin-right: 5px; margin-bottom: 5px;">
+								<p>The election campaign for dogs on 13th May</p>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+
+					<div style="margin-top:10px;">
+						<p class="font20 noto500 web-r-txt">About</p>
+						<p class="font15 web-r-txt" style="margin-top:5px;">Kim is the leader of the Puppy Party. He became known to the public as a YouTuber. With the reputation gained through this, he became the representative of the puppy party.</p>
+						<div class="flex web-r-txt" style="margin-top: 5px;">
+						<p class="font15 noto500" style="width:68px;">Born : </p>
+						<p>20th May 20XX (age 7 years), Korea</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="black">
+		<div class="width1 white h35 marginauto bor-lr-w"></div>
+	</section>
+
+	<!-- 2페이지 -->
+	<section class="black">
+		<!-- 검색페이지2 -->
+		<div class="height1 white relative marginauto width1 bor-lr-w">
+			<!-- ai 말풍선 -->
+			<div class="absolute" style="z-index: 3;" id="aimsg2">
+					<img src="img/ai3.png" class="aiballoon">
+					<div class="balloontxt">
+						<p class="msg txtcenter aimsg" style="padding-top: 62px;">Well.. ok. How about watching this?</p>
+					</div>
+			</div>
+
+			<img src="img/web.png" class="web">
+
+			<!-- 검색창 -->
+			<div class="webline1 flex relative">
+				<p class="font25" style="padding-top: 128px;">Kim Meong Moong</p>
+				<img src="img/search.png" style="width:57px; height:57px; position: absolute;right:0;bottom: 0;">
+			</div>
+
+			<!-- 메뉴 -->
+			<div class="flex marginauto width0" style="height:44px; margin-top: 28px; border: black solid 1px;">
+				<nav>
+					<li class="font20" style="background: black; color: white;">All</li>
+					<li class="font20">News</li>
+					<li class="font20">Images</li>
+					<li class="font20">Videos</li>
+					<li class="font20">Maps</li>
+					<li class="font20">Books</li>
+					<li class="font20">Finance</li>
+				</nav>
+			</div>
+
+			<!-- 기본 정보 -->
+			<div class="marginauto width0">
+				<div class="webline2">
+				<p class="font28 noto700" style="padding-left: 22px; margin-top: 0; padding-top: 19px; margin-bottom: 2px;">Kim Meong Moong</p>
+				<p style="margin: 0;padding-left: 22px; font-size: 17pt;">Representative of Puppy party</p>
+				</div>
+				
+			</div>
+			<div class="flex marginauto width0" style="height: 574px; margin-top: 10px;">
+				<!-- 뉴스/SNS -->
+				<div style="width:697px;height:558px;">
+					<div class="web1grid">
+						<div style="grid-column: 1/2; grid-row: 1/4;">
+							<img src="img/news1.png" style="width:332px;">
+						</div>
+						<div style="grid-column: 1/2; grid-row: 4/5;">
+							<p class="font15 web1news noto500">DogNews</p>
+							<p class="font18 web1news">[D-10] ‘Dog vs Cat election’ is just around the corner</p>
+						</div>
+						<div style="grid-column: 2/3; grid-row:1/2">
+							<img src="img/news2.png" style="width:332px;">
+						</div>
+						<div style="grid-column: 2/3; grid-row: 2/4;">
+							<p class="font15 web1news noto500" style="padding-top: 6px;">MeowNews</p>
+							<p class="font18 web1news">The first day of the ‘Dog vs Cat’ campaign.</p>
+							<img src="img/news3.png" style="width:332px;">
+
+						</div>
+						<div style="grid-column: 2/3; grid-row: 4/5; ">
+							<p class="font15 web1news noto500">BowwowNews</p>
+							<p class="font18 web1news">[Live] Puppy Party’s ‘Kim Meong Moong’ campaign site</p>
+							<p class="font15 textgray web1news txtright">12 hours ago</p>
+						</div>
+					</div>
+					<div style="padding-left: 22px; padding-top:23px;">
+						<p class="font15">churrbook.com/meongmoong</p>
+						<p class="font25">Kim Meong Moong</p>
+						<p class="font18 noto300" style="padding-left:22px;">Kim Meong Moong.Follower 2230980 Likes 22052612345</p>
+					</div>
+				</div>
+
+				<!-- 뮤투브/정보 -->
+
+				<div class="relative" style="width:366px;height:558px; border-left:solid 1px #CECECE;">
+
+					
+					<div class="marginauto" style="width:359px;">
+						<div id="mtbinfo" class="absolute" style="height: 88px; width:362px; top: 0; left: calc(50% - 174.5px); background-color:#FFCC00;"></div>
+					</div>
+
+					<a href="#myoutube1" id="mtbinfo0">
+						<div class="margin-b-10">
+							<p class="font18 web-r-txt">Myoutube.com/meongmoong</p>
+							<p class="font25 web-r-txt noto700">Kim Meong Moong TV</p>
+							<p class="font15 textgray txtright">More ></p>
+						</div>
+					</a>
+
+					<div class="flex" style="width:370px;">
+						<div style="width:4px;">
+						</div>
+						<div class="mtbbox">
+							<div class="mtbimg1"></div>
+							<div style="margin-top:2px;margin-left:5px; margin margin-right: 5px; margin-bottom: 5px;">
+							<p>Meong Moong’s snack MUKBANG</p>
+							</div>
+						</div>
+
+						<div class="mtbbox">
+							<div class="mtbimg2"></div>
+							<div style="margin-top:2px;margin-left:5px; margin margin-right: 5px; margin-bottom: 5px;">
+								<p>The election campaign for dogs on 13th May</p>
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="clickred absolute" style="z-index:3; top: -45px; right: -80px; ">
+						<img src="img/click1.png" style=" width:148px;">
+					</div>
+					
+					<div style="margin-top:10px;">
+						<p class="font20 noto500 web-r-txt">About</p>
+						<p class="font15 web-r-txt" style="margin-top:5px;">Kim is the leader of the Puppy Party. He became known to the public as a YouTuber. With the reputation gained through this, he became the representative of the puppy party.</p>
+						<div class="flex web-r-txt" style="margin-top: 5px;">
+						<p class="font15 noto500" style="width:68px;">Born : </p>
+						<p>20th May 20XX (age 7 years), Korea</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+	<section class="black">
+		<div class="width1 white h35 marginauto bor-lr-w"></div>
+	</section>
+	
+	<!-- 3페이지 -->
+	<section class="black" id="myoutube1">
+		<!-- 영상페이지1 -->
+		<div class="height1 white relative flex marginauto width1 bor-lr-w">
+			<!-- ai 말풍선 -->
+			<div class="absolute" style="z-index: 4;" id="aimsg2">
+				<img src="img/ai3.png" class="aiballoon">
+			<div class="balloontxt">
+				<p class="msg txtcenter aimsg" style="padding-top: 62px;">It looks good, doesn’t it?</p>
+			</div>
+			</div>
+
+			<!-- 말풍선/웹 -->
+			<div class="relative" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon2">
+				<div class="balloontxt2">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">The message has arrived! Click it.</p>
+				</div>
+			</div>
+			
+			<img src="img/web.png" class="web">
+			
+			<div class="marginauto width0">
+
+				<!-- 메세지알람 -->
+				<a href="#phone1" id="msgalert" class="white">
+					<div id="alertbox" class="bor-all absolute white" style="bottom:72px; right:72px; width:372px; height: 97px;">
+						<div class="marginauto flex" style="width: 332px; padding-top:14px;">
+							<div style="width:68px;">
+								<div class="bor-all" style="border-radius: 34px;width:68px; height: 68px; background-image: url(img/pfp1.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 264px; padding-left: 20px;">
+								<p class="font18" style="padding-top:10px;">Jake</p>
+								<p class="font15">A new message has arrived.</p>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<!-- click -->
+				<div id="msgalert-1" class="absolute" style="bottom:130px; right: 35px; z-index: 5;">
+					<img src="img/click1.png" style="width:148px;">
+				</div>	
+
+				<!-- 선 -->
+				<div class="flex marginauto width0" style="height: 163px;">
+					<div style="width:328px; height: 133px;border-bottom:solid 1px"></div>
+					<div style="width:455px;">
+						<p class="font35 noto700 txtcenter" style="padding-top:105px">
+							Kim Meong Moong TV</p>
+					</div>
+					<div style="width:328px; height: 133px;border-bottom:solid 1px"></div>
+				</div>
+
+				<!-- 영상-->
+				<div class="black" style="width:1060px; height:425px; border:solid 1px black;">
+				</div>
+				<img src="img/snack.gif" style="height: 424px; position:absolute; top: 164.5px; left: calc(50% - 377.66px); margin: 0;">
+
+				<!-- 영상정보 -->
+				<div class="flex"style="height:90px; border-bottom:solid 1px black;">
+					<div style="width:781px;">
+						<p class="font30 noto700" style="padding-top:33px;">Meong Moong’s snack MUKBANG
+						</p>
+					</div>
+					<div class="flex" style="width:283px;">
+						<p class="font25" style="padding-top:40px;">Kim Meong Moong TV</p>
+					</div>
+				</div>
+				
+				<!-- 영상썸네일 -->
+				<div class="flex" style="height:346px;">
+					<div class="bor-all mtbbox2" style="background-image: url(img/thumb2.png); background-size: cover;"></div>
+					<div class="bor-all mtbbox2" style="background-image: url(img/thumb1.png); background-size: cover;"></div>
+					<div class="bor-all mtbbox2" style="margin-right: 0; background-image: url(img/thumb3.png); background-size: cover;"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="black">
+		<div class="h35 black relative marginauto width1 bor-lr-w">
+			<div class="absolute bor-lr-w h35" style="width:620px; top:0; left: calc(50% - 310px);">
+			</div>
+		</div>
+	</section>
+
+	<!-- 4페이지 -->
+	<section class="black" id="phone1">
+		<!-- 폰1 -->
+		<div class="height1 black relative marginauto width1 bor-lr-w">
+
+			<!-- 말풍선 -->
+				<div>
+					<img src="img/me3.png" class="meballoon" style="z-index:6; bottom:385px; right: 120px;">
+					<div class="balloontxt" style="bottom: 385px; z-index:6; right:120px;">
+						<p class="msg txtcenter" style="padding-top:53px;">Let's check Jake's message.</p>
+					</div>
+				</div>
+
+			<div class="absolute bor-lr-w height1 " style="width:620px; top:0; left: calc(50% - 310px);">
+
+				<div class="relative">
+					<img src="img/phone.png" style="width:486px; position: absolute; z-index: 5; top: 83px; left: calc(50% - 243px);">
+				</div>
+				<div class="white marginauto" style="width: 427px; height: 709px; margin-top: 175px;">
+					<div class="marginauto relative" style="width:398px;">
+						<p class="font25 noto700" style="padding-top: 28px;">Messages</p>
+						<div id="msgad1-1" class="bor-all"style="height:111px; margin-top: 10px; width: 397px; background-image: url(img/ad0.png); background-size:cover;"></div>
+
+						<div id="msgad1-2" class=" absolute bor-all black textwhite txtcenter"style="height:111px; width: 397px; top: 74px;">
+							<p class="font23" style="font-weight: 600; padding-top: 26px;">Let’s vote for the dog vs cat election!</p>
+						</div>
+						
+						<!-- 메세지목록 -->
+						<!-- 목록-밍밍 -->
+						<!-- 노란색 강조 -->
+						<div class="marginauto" style="width:359px;">
+						<div id="mtbinfo" class="absolute" style="height: 76px; width:317px; top: 207px; right:0px; background-color:#FFCC00;"></div>
+						</div>
+
+						<!-- 밍밍 클릭 -->
+						<a href="#phone2" id="msglist1">
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp1.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Jake</p>
+								<p class="font15">Hey Did you check this?</p>
+							</div>
+							<div class="relative" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">10:28 a.m.</p>
+								<img src="img/msg2.png" class="absolute"style="top: 33px; right: 10px; width:30px;">
+							</div>
+						</div>
+						</a>
+
+						<!-- click -->
+						<div id="msglist1-1" class="absolute" style="top:170px; right: -40px; z-index: 5;">
+							<img src="img/click1.png" style="width:148px;">
+						</div>
+
+					<!-- 목록-박왕왕 -->
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp2.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Santiago</p>
+								<p class="font15">Okayyy</p>
+							</div>
+							<div class="" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">8:23 a.m.</p>
+							</div>
+						</div>
+						
+						<!-- 목록-이멍멍 -->
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp3.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Lee mungmung</p>
+								<p class="font15">When??</p>
+							</div>
+							<div class="" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">12:33 a.m.</p>
+							</div>
+						</div>
+
+						<!-- 목록-영어스터디 -->
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp4.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Study group</p>
+								<p class="font15">Alright. Let’s meet at 3pm.</p>
+							</div>
+							<div class="" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">12:29 a.m</p>
+							</div>
+						</div>
+
+						<!-- 목록-김왈왈 -->
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp5.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Kim daengdaeng</p>
+								<p class="font15">ha that’s hilarious</p>
+							</div>
+							<div class="" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">yesterday</p>
+							</div>
+						</div>
+
+						<!-- 목록-엄마 -->
+						<div class="marginauto flex msglist" style="margin-top: 20px;">
+							<div style="width: 85px;">
+								<div class="bor-all" style="border-radius: 14px;width:71px; height: 71px; background-image: url(img/pfp6.png); background-size:cover;">
+								</div>
+							</div>
+							<div style="width: 248px;">
+								<p class="font18 msgtxt">Mom</p>
+								<p class="font15">Okay</p>
+							</div>
+							<div class="" style="width:63px;">
+								<p class="font12 textgray msgtxt txtright">yesterday</p>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="black">
+		<div class="h35 black relative marginauto width1 bor-lr-w">
+			<div class="absolute bor-lr-w h35" style="width:620px; top:0; left: calc(50% - 310px);">
+			</div>
+		</div>
+	</section>
+	<!-- 5페이지 -->
+	<section class="black" id="phone2">
+		<!-- 폰2 -->
+		<div class="height1 black relative marginauto width1 bor-lr-w">
+
+			<!-- 말풍선 -->
+			<div>
+				<img src="img/me3.png" class="meballoon" style="z-index:6; top:652px; right: 39px;">
+				<div class="balloontxt" style="top: 670px; z-index:6; right:38px;">
+					<p class="msg txtcenter" style="padding-top:40px;"> Oh my.. 32 weeks? I'm gonna check it.</p>
+				</div>
+			</div>
+
+			<!-- <div>
+				<img src="img/ai3.png" class="aiballoon" style="bottom: 0px; z-index: 1;">
+				<div class="balloontxt" style="bottom: 0px; z-index:1;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+						....
+					</p>
+				</div>
+			</div> -->
+
+			<div class="absolute bor-lr-w height1" style="width:620px; top:0; left: calc(50% - 310px);">
+
+				<div class="relative">
+					<img src="img/phone.png" style="width:486px; position: absolute; z-index: 5; top: 83px; left: calc(50% - 243px);">
+				</div>
+
+				<div class="marginauto" style="width: 427px; height: 709px; margin-top: 175px; background-image: url(img/msgback.png); background-size:cover;">
+
+					<!-- 채팅창 -->
+					<div class="marginauto relative" style="width:398px;">
+						<div class="txtcenter font25" style="height: 59px;">
+							<p style="padding-top:10px;">Jake</p>
+						</div>
+
+						<!-- mingchat1 -->
+						<div class="relative">
+							<div class="mechat absolute" style="width: 109px; right: 0;">
+								<p class="font16 chatmargin">Gm! Jake</p>
+							</div>
+						</div>
+
+						<!-- mingchat -->
+						<div class="flex" style="margin-top: 60px;">
+							<div style="width:77px;">
+								<!-- 프사 -->
+								<div class="bor-all"style="width: 62px; height: 62px; border-radius: 10px; background-image: url(img/pfp0.png); background-size:cover;"></div>
+							</div>
+							<!-- 이름 -->
+							<div>
+								<div class="relative">
+									<p class="font18 textwhite absolute" style="font-weight: 900;">Jake</p>
+									<p class="font18 absolute" style="top:0 left:0"> Jake</p>
+								</div>
+
+								<!-- 뉴스 -->
+								<a href="#puppytv">
+								<div class="bor-all bor-18"style="width: 260px; height: 190px; margin-top: 35px; background-image: url(img/chat0.png); background-size:cover;" id="puppytv0">
+									<div style="height:115px;"></div>
+									<div>
+										<p class="font15" style="padding-top:11px; padding-left: 10px;">“A man needs to be cured for 32 weeks because cat scratched”</p>
+										<p class="font12 textgray" style="padding-left:10px;">puppyTV</p>
+									</div>
+								</div>
+								<div class="clickred absolute" style="z-index:5; top: 130px; left: 255px; ">
+									<img src="img/click1.png" style=" width:148px;">
+								</div>
+								</a>
+
+								
+
+								<div class="mingchat" style="margin-top:14px; width: 220px;">
+									<p class="chatmargin font16">Hey Did you check this?</p>
+								</div>					
+							</div>
+						</div>
+
+						<!-- mechat2 -->
+						<div class="relative" style="margin-top:14px;">
+							<div class="mechat absolute" style="margin-top:14px; width: 56px; right: 0; ">
+								<p class="chatmargin font16">wow</p>
+							</div>
+						
+							<div class="mechat absolute" style="width: 174px; right:0; top: 52px;">
+								<p class="chatmargin font16">What’s going on????</p>
+							</div>
+						
+							<div class="mechat absolute" style="width: 185px; right:0; top: 92px;">
+								<p class="chatmargin font16">냥</p>
+							</div>
+						</div>
+						
+						<!-- mingchat2 -->
+						<div class="flex" style="margin-top: 167px;">
+							<!-- 프사 -->
+							<div style="width:77px;">
+								<div class="bor-all"style="width: 62px; height: 62px; border-radius: 10px; background-image: url(img/pfp0.png); background-size:cover;"></div>
+							</div>
+							<!-- 이름 -->
+							<div>
+								<div class="relative">
+									<p class="font18 textwhite absolute" style="font-weight: 900;">Jake</p>
+									<p class="font18 absolute" style="top:0 left:0"> Jake</p>
+								</div>
+								<div class="mingchat" style="width: 174px; margin-top: 35px;">
+								<p class="chatmargin font16">Isn’t it shocking??</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- chatinput -->
+						<div class="white bor-all bor-18 relative" style="margin-top:28px;">
+							<p class="font18 chatmargin" style="padding-left: 20px; color:white;">...</p>
+
+							<a href="#mtbpg2">
+								<div id="sendbutton" class="white bor-all bor-18 absolute txtcenter" style="top: 0;right: 0; width: 80px;">
+								<p class="font18 chatmargin">Send</p>
+								</div>
+							</a>
+
+							<!-- click -->
+							<div id="sendbutton2" class="absolute" style="bottom:15px; right: -145px; z-index: 5;">
+							<img src="img/click1.png" style="width:148px;">
+							</div>
+
+						</div>
+						
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="black">
+		<div class="h50 black relative marginauto width1 bor-lr-w">
+			<div class="absolute bor-lr-w h50" style="width:620px; top:0; left: calc(50% - 310px);">
+			</div>
+		</div>
+	</section>
+
+
+	<!-- 5.5페이지 -->
+	<section class="black" id="puppytv">
+		<div class="height1 white relative marginauto width1 bor-lr-w">
+			<!-- ai message -->
+			<div class="absolute" style="z-index: 3;" id="aimsg2">
+					<img src="img/ai3.png" class="aiballoon">
+					<div class="balloontxt">
+						<p class="msg txtcenter aimsg" style="padding-top: 62px;">...</p>
+					</div>
+			</div>
+
+			<!-- me 말풍선 -->
+			<img src="img/me3.png" class="meballoon">
+			<div class="balloontxt" style="bottom: 0; right: 0;">
+				<p class="msg txtcenter" style="padding-top:53px;">Wow.. It's shocking!</p>
+			</div>
+
+			<!-- 웹 페이지 -->
+			<img src="img/web.png" class="web">
+
+			<div class="height1 relative">
+				<img src="img/web2.png" class="web">
+				<div class="width0 absolute" style="left: calc(50% - 531px); z-index: 1;">
+					<div class="bor-all marginauto" style="width: 1034px; height: 390px; background-image: url(img/mtbvideo1.gif); background-size:cover; margin-top: 135px;">
+					</div>
+					<div class="flex marginauto margin-t-10" style="width:1034px;">
+
+						<!-- 영상 설명+댓글 -->
+						<div style="width:724px;">
+							<div class="marginauto bor-bottom" style="padding-top:10px; padding-bottom: 10px; width: 704px;">
+								<p class="font23 noto700" >“A man needs to be cured for 32 weeks because cat scratched”</p>
+								<p class="textgray font18 txtright margin-t-10">879M views - 1 hour ago</p>
+							</div>
+							<!-- 댓글 스크롤-->
+							<div class="marginauto" style="overflow-x:hidden; width:704px; height:280px;">
+
+								<!-- 댓글1 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+										<div class="bor-all commentimg1">
+										</div>
+									</div>
+									<div class="commenttxt1">
+										<p class="font20 noto700">CUTEPUPPY</p>
+										<p class="font18">Oh, my God. How could this happen?</p>
+									</div>
+								</div>
+
+								<!-- 댓글2 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+									<div class="bor-all commentimg2">
+									</div>
+									</div>
+									<div class="commenttxt2">
+										<p class="font20 noto700">Baseball</p>
+										<p class="font18">I hope he's okay.</p>
+									</div>
+								</div>
+
+								<!-- 댓글3 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+										<div class="bor-all commentimg1">
+										</div>
+									</div>
+									<div class="commenttxt1">
+										<p class="font20 noto700">TIGER</p>
+										<p class="font18">Wow, that's shocking. Cats are REALLY scary.</p>
+									</div>
+								</div>
+
+								<!-- 댓글4 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+									<div class="bor-all commentimg2">
+									</div>
+									</div>
+									<div class="commenttxt2">
+										<p class="font20 noto700">Flower</p>
+										<p class="font18">As expected, dogs are better than cats. </p>
+									</div>
+								</div>
+
+								<!-- 댓글5 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+										<div class="bor-all commentimg1">
+										</div>
+									</div>
+									<div class="commenttxt1">
+										<p class="font20 noto700">DOGLOVE</p>
+										<p class="font18">Cats are really aggressive. It's scary.</p>
+									</div>
+								</div>
+
+								<!-- 댓글6 -->
+								<div class="flex marginauto margin-t-15" style="width: 704px;">
+									<div style="width: 85px;">
+									<div class="bor-all commentimg2">
+									</div>
+									</div>
+									<div class="commenttxt2">
+										<p class="font20 noto700">NOCAT</p>
+										<p class="font18">This is why cats shouldn't win.</p>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<!-- 광고 -->
+						<div class="bor-all" style="width:320px; background-image: url(img/mtbad2.png); background-size:cover;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!-- 6페이지 -->
+	<section class="black" id="mtbpg2">
+		<!-- 영상페이지2 -->
+		<div class="height1 white relative marginauto width1 bor-lr-w">
+			<img src="img/web.png" class="web">
+
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon">
+				<div class="balloontxt">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					Hi again! Click the video you want to watch.
+					</p>
+				</div>
+			</div>
+
+			<!-- 검색창, 로고 -->
+			<div class="marginauto bor-bottom width0 flex" style="height: 182px;">
+				<div style="width:1000px;">
+					<img src="img/logo1.png" style="width: 206px; padding-top:110px;">
+				</div>
+				<div class="relative" style="width:62px;"> 
+					<img src="img/search.png" style="width:57px; height:57px; position: absolute;right:0;bottom: 0;">
+				</div>
+			</div>
+
+			<!-- 광고 -->
+			<div class="flex marginauto width0" style="height:216px; margin-top: 30px;">
+				<div class="bor-all" style="width:628px; background-image: url(img/ad1.png) ; background-size:cover;">
+				</div>
+				<div class="bor-all" style="width: 432px; background-image: url(img/ad2.gif); background-size:cover; border-left: none;">
+				</div>
+			</div>
+
+			<!-- 썸네일 첫째줄 -->
+			<div class="flex width0 marginauto" style="margin-top:15px;">
+				<!-- 썸네일1 -->
+				<div class="relative mtbbox3" style="margin-right:11px;">
+					<div id="mtb1-1">
+					<img src="img/mtbimg4.png" style="width:346px;">
+					</div>
+
+					<div id="mtb1-2" class="absolute mtb-hover"> 
+						<div class="relative">
+							<img src="img/mind.png" style="width:346px;">
+							<div class="absolute" style="top:83px; ">
+								<div class="txtcenter" style="width:346px;">
+								<p class="font20 " style=" font-weight: 600;">
+								Can’t believe videos like this.</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<p class="font18" style="margin-top: 5px;">[Fact check] Cats CAN’T make someone need to be cured for 32 weeks</p>
+					<p class="font15 textgray txtright" style="margin-right:19.5px; margin-top: 5px;">102k views - 2 days ago</p>
+				</div>
+
+				<!-- 썸네일2 -->
+				<a href="#mtbpg3" id="mtbthumb">
+				<div class="mtbbox3 relative" style="margin-right:11px;">
+					<div id="mtb2-1" class="marginauto">
+						<img src="img/mtbimg2.png" style="width:346px;">
+					</div>
+
+					<div id="mtb2-2" class="absolute mtb-hover">
+						<img src="img/mtbimg2-2.png" style="width: 346px;">
+					</div>
+
+					<div id="mtb2-3" class="absolute" style="top: 60px; right: -55px; z-index: 5;">
+					<img src="img/click1.png" style="width:148px;">
+					</div>
+					<div id="mtb2-3" class="absolute" style="top: -27px; left: -50px; z-index: 5;">
+					<img src="img/click2.png" style="width:148px;">
+					</div>
+
+					<p class="font18" style="margin-top:5px;">2hr Discussion: Why Dogs are the cutest?</p>
+					<p class="font15 textgray txtright" style="margin-top: 5px; margin-right: 9px;">55k views - 18 hours ago</p>
+				</div>
+				</a>
+
+				<!-- 썸네일3 -->
+				<div class="mtbbox3 relative">
+					<div id="mtb3-1">
+						<img src="img/mtbimg8.png" style="width:346px;">
+					</div>
+
+					<div id="mtb3-2" class="absolute mtb-hover"> 
+						<div class="relative">
+							<img src="img/mind.png" style="width:346px;">
+							<div class="absolute" style="top:83px; ">
+								<div class="txtcenter" style="width:346px;">
+								<p class="font20 " style=" font-weight: 600;">
+								I knew it! Cats "do" cats.
+								</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<p class="font18" style="margin-top:5px;">Despite the controversy over the Meow Party, it is still “silent.”</p>
+					<p class="txtright font15 textgray" style="margin-top:5px;">89k views - 1 day ago</p>
+				</div>
+			</div>
+
+			<!-- 썸네일 둘째줄 -->
+			<div class="flex width0 marginauto margin-t-10" >
+				<!-- 썸네일4 -->
+				<div class="mtbbox3 relative" style="margin-right:11px;">
+					<div id="mtb4-1">
+						<img src="img/mtbimg7.png" style="width:346px;">
+					</div>
+
+					<div id="mtb4-2" class="absolute mtb-hover"> 
+						<div class="relative">
+							<img src="img/mind.png" style="width:346px;">
+							<div class="absolute" style="top:83px; ">
+								<div class="txtcenter" style="width:346px;">
+									<p class="font20 " style=" font-weight: 600;">
+									Awwww Lovely doggg
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+
+				<!-- 썸네일5 -->
+				<div class="mtbbox3 relative" style="margin-right:11px;">
+					<div id="mtb5-1">
+						<img src="img/mtbimg5.png" style="width: 346px;">
+					</div>
+
+					<div id="mtb5-2" class="absolute mtb-hover"> 
+						<div class="relative">
+							<img src="img/mind.png" style="width:346px;">
+							<div class="absolute" style="top:83px; ">
+								<div class="txtcenter" style="width:346px;">
+								<p class="font20 " style=" font-weight: 600;">
+								It’s FAKE NEWS!!!
+								</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 썸네일6 -->
+				<div class="mtbbox3 relative">
+					<div id="mtb6-1">
+						<img src="img/mtbimg6.png" style="width:346px;">
+					</div>
+
+					<div id="mtb6-2" class="absolute mtb-hover"> 
+						<div class="relative">
+							<img src="img/mind.png" style="width:346px;">
+							<div class="absolute" style="top:75px; ">
+								<div class="txtcenter" style="width:346px;">
+								<p class="font20 " style=" font-weight: 600;">
+								It's completely nonsense.<br>It's a fabrication!
+								</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</section>
+
+	<!-- 7페이지 -->
+	<section class="black" id="mtbpg3">
+		<!-- 영상페이지3-영상추천 -->
+		<div class="heigh2-5 white relative marginauto width1 bor-lr-w" style="background: linear-gradient(white,black);">
+			<div class="width-h height2-5 bor-lr-w absolute" style="left:calc(50% - 310px);"></div>
+			<div class="height1 relative">
+				<img src="img/web2.png" class="web">
+				<div class="width0 absolute" style="left: calc(50% - 531px); z-index: 1;">
+					<div class="bor-all marginauto" style="width: 1034px; height: 500px; background-image: url(img/mtbvideo2.gif); background-size:cover; margin-top: 135px;">
+					</div>
+					<div class="flex marginauto margin-t-10" style="width:1034px;">
+						<!-- 영상 설명+댓글 -->
+						<div style="width:724px;">
+							<div class="marginauto bor-bottom" style="padding-top:10px; padding-bottom: 10px; width: 704px;">
+								<p class="font23 noto700" >2hr Discussion: Why Dogs are the cutest?</p>
+								<p class="textgray font18 txtright margin-t-10">55k views - 18 hours ago</p>
+							</div>
+							<!-- 댓글 -->
+							<div class="flex marginauto margin-t-10" style="width: 704px;">
+								<div style="width: 85px;">
+								<div class="bor-all margin-t-10" style="border-radius: 35px;width:71px; height: 71px; background-image: url(img/pfp5.png); background-size:cover;">
+								</div>
+								</div>
+								<div style="padding-left:10px; width: 619px;">
+									<p class="font20 noto700">DOGLOVE</p>
+									<p class="font18">As expected! Dogs are cuter than cats. Cats scratch dangerously, so puppies are much much better.</p>
+								</div>
+							</div>
+
+							<div class="flex marginauto margin-t-10" style="width: 704px;">
+								<div style="width: 85px;">
+								<div class="bor-all " style="border-radius: 35px;width:71px; height: 71px; background-image: url(img/pfp2.png); margin: 0; background-size:cover;">
+								</div>
+								</div>
+								<div style="padding-left:10px; width: 619px;" class="margin-t-10">
+									<p class="font20 noto700">Flower</p>
+									<p class="font18">The Algorithm brought me here. Thank you algorithm! :D </p>
+								</div>
+							</div>
+						</div>
+						<!-- 광고 -->
+						<div class="bor-all" style="width:310px; height: 276px; background-image: url(img/mtbad.png); background-size:cover;"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="height1-5">
+				<div class="flex width1 marginauto" style="padding-top:120px; ">
+
+				<div class="absolute" style="z-index: 3;">
+					<img src="img/ai3.png" class="aiballoon" style="top: -100px;">
+					<div class="balloontxt" style="top:-100px;">
+						<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+						Did you like that video?
+						</p>
+					</div>
+				</div>
+				<div class="absolute" style="z-index: 3;">
+					<img src="img/ai3.png" class="aiballoon" style="top: 20px;" >
+					<div class="balloontxt" style="top:20px;">
+						<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+						Why don't you watch these?
+						</p>
+					</div>
+				</div>
+
+				<div>
+					<img src="img/me3.png" class="meballoon" style="bottom:80px;">
+					<div class="balloontxt" style="bottom: 80px; right: 0;">
+						<p class="msg txtcenter" style="padding-top:53px;">Oh Great!</p>
+					</div>
+				</div>
+
+					<div style="width:330px;" class="relative">
+						<div class="absolute" style="bottom:150px; width: 300px; left:15px; z-index: 1;">
+						<p style="opacity: 0.15; word-break: break-all;" class="font15 font-e">[Correctional Report] Correct the wrong part of the article on May 10, 20XX.</p>
+						<p style="opacity: 0.2; word-break:break-all;" class="font15 font-e">
+						On May 10, 20XX, reporter Namgung MeongMeong News' article titled "The history of abusive assault by the leader of the Meow Party" said, "In 20XX, Lee yaong, the leader of the Meow Party (6 year old) verbally abused and assaulted his personal secretary for not keeping his snacks properly." Correct the content through this article.
+						</p>
+						<p style="opacity: 0.25; word-break:break-all;" class="font15 font-e">
+						Hyun nyan, who was Lee Yaong's personal secretary at the time, has told Puppy News that Yaong has never verbally abused or assaulted, and that rumors related to Yaong's past are just nonsense rumors spread on SNS.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							A dog, identified only by his surname Park (4 years old), who came out for a walk at OO District Park in OO City, bit a pedestrian and injured him. Park later ran away and was caught by the police four days later and handed over to the prosecution.OO Police Station in OO City announced on the 12th that they found Park on the run in a mountain near the scene of the incident and arrested him. Park is suspected of suddenly biting a passerby's ankle and injuring him while walking around 7 p.m. on the 11th.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							Victim B suffered an ankle injury in this incident and was taken to a hospital for treatment.B's family said, "The wound on the ankle is not severe, but B is reluctant to go out for a walk, which was his only hobby," adding that the mental damage was quite significant.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							The dog, identified only by his surname Park, 4 years old, remains silent about why he bit a passerby.
+						</p>
+						</div>
+					</div>
+
+					<div class="width-h">
+						<img src="img/7-mtbimg4.png" class="width-h marginauto" style="margin-bottom: 30px;">
+						<img src="img/7-mtbimg2.png" class="width-h marginauto" style="margin-bottom: 30px;">
+						<img src="img/7-mtbimg1.png" class="width-h marginauto">
+					</div>
+
+					<div style="width:330px;" class="relative">
+						<div class="absolute" style="bottom:150px; width: 300px; left:15px; z-index: 1;">
+						<p style="opacity: 0.15; word-break: break-all;" class="font15 font-e">[Correctional Report] Correct the wrong part of the article on May 10, 20XX.</p>
+						<p style="opacity: 0.2; word-break:break-all;" class="font15 font-e">
+						On May 10, 20XX, reporter Namgung MeongMeong News' article titled "The history of abusive assault by the leader of the Meow Party" said, "In 20XX, Lee yaong, the leader of the Meow Party (6 year old) verbally abused and assaulted his personal secretary for not keeping his snacks properly." Correct the content through this article.
+						</p>
+						<p style="opacity: 0.25; word-break:break-all;" class="font15 font-e">
+						Hyun nyan, who was Lee Yaong's personal secretary at the time, has told Puppy News that Yaong has never verbally abused or assaulted, and that rumors related to Yaong's past are just nonsense rumors spread on SNS.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							A dog, identified only by his surname Park (4 years old), who came out for a walk at OO District Park in OO City, bit a pedestrian and injured him. Park later ran away and was caught by the police four days later and handed over to the prosecution.OO Police Station in OO City announced on the 12th that they found Park on the run in a mountain near the scene of the incident and arrested him. Park is suspected of suddenly biting a passerby's ankle and injuring him while walking around 7 p.m. on the 11th.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							Victim B suffered an ankle injury in this incident and was taken to a hospital for treatment.B's family said, "The wound on the ankle is not severe, but B is reluctant to go out for a walk, which was his only hobby," adding that the mental damage was quite significant.
+						</p>
+						<p class="font15 font-e" style="word-break: break-all; opacity: 0.2;">
+							The dog, identified only by his surname Park, 4 years old, remains silent about why he bit a passerby.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>		
+	</section>
+
+	<!-- 8페이지 -->
+	<section class="black" id="news1">
+		<!-- 뉴스페이지 -->
+		<div class="height1 black relative marginauto width1 bor-lr-w">
+			<div class="width-h height1 bor-lr-w absolute" style="left:calc(50% - 310px);"></div>
+			<!-- 말풍선 -->
+			<img src="img/ai3.png" class="aiballoon">
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon">
+				<div class="balloontxt">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					Now you came for news! Welcome
+					</p>
+				</div>
+			</div>
+
+			<div class="aiballoon3" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon">
+				<div class="balloontxt">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					Do you want customized news for yourself?
+					</p>
+				</div>
+			</div>
+
+			<div class="meballoon" style="z-index:3">
+				<img src="img/me3.png" class="meballoon">
+				<div class="flex absolute" style="top: -115px;left: calc(50% - 125px); z-index: 4; width: 250px;">
+					<a href="#news2">
+					<div class="txtcenter bor-all-w bor-25 black msg" style="width:120px; margin-right: 10px;" id="ynbutton">
+						<p class=" yn-margin">Yes!</p>
+					</div>
+					</a>
+					<div class="txtcenter bor-all-w bor-25 black msg" style="width:120px;" id="ynbutton">
+						<p class="yn-margin">No</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- 웹+흰바탕 -->
+			<img src="img/web.png" class="web absolute">
+			<div class="white absolute" style="width:1136px; height: 878px; top:calc(50% - 439px); left:calc(50% - 568px); z-index: 0;"></div>
+
+			<!-- 밑에 선 -->
+			<div class="absolute bor-lr-w height1" style="width:620px; height: 83px; bottom:0; left: calc(50% - 310px);"></div>
+
+			<div class="webline1 flex relative" style="border: none;">
+						<p class="font25" style="padding-top: 128px;"></p>
+						<img src="img/search.png" style="width:57px; height:57px; position: absolute;right:0;bottom: 0;">
+			</div>
+
+			<!-- 뉴스+검색창 -->
+			<div class="width0 absolute" style="z-index:2; left:calc(50% - 531px);">
+				<!-- 메뉴 -->
+				<div class="flex marginauto width0" style="height:44px; display: block; margin-top: 0px; border: black solid 1px">
+					<nav>
+						<li class="font20" style="background: black; color: white;">All</li>
+						<li class="font20">Politics</li>
+						<li class="font20">Business</li>
+						<li class="font20">Society</li>
+						<li class="font20">Culture</li>
+						<li class="font20">World</li>
+						<li class="font20">Science</li>
+						<li class="font20">MY News</li>
+					</nav>
+				</div>
+				<!-- 뉴스 칸 -->
+				<div class="flex width0" style="margin-top:15px;">
+					<!-- 오늘날씨+광고 -->
+					<div class="bor-all" style="width:160px;">
+						<div style="padding-left: 15px; padding-top: 12px;">
+							<p class="font20 noto700" style="font">20XX.05.14</p>
+							<p class="font18 noto500" style="margin-top:17px;">Weather</p>
+							<div class="relative margin-t-10">
+								<img src="img/weather.png" style="width:126px;">
+								<p class="absolute font15 textwhite" style="z-index:2; bottom: 20px; left:33px;"> Cloudy</p>
+							</div>
+							<p class="font20 margin-t-10">Fine dust</p>
+							<div class="bor-all margin-t-10" style=" width: 126px; height:34px;">
+								<div class="marginauto flex" style="width:90px;">
+									<div>
+										<img src="img/weather2.png" style="width: 41px;">
+									</div>
+									<div style="margin-top:5px; margin-left: 10px;margin-right: 10px;">
+										<p class="font15">Bad</p>
+									</div>
+								</div>
+							</div>
+							<div style="width:126px;" class="txtright">
+								<p class="font12 textgray">More</p>
+							</div>
+
+							<div class="bor-all margin-t-10 margin-b-10" style="background-image:url(img/weather-ad.png); background-size: cover; width:126px; height: 266px;">
+								<div class="margin-t-10"style="margin-left: 5px;">
+									<p class="font18 textwhite">가. Kim Meong Moong</p>
+									<p class="font12 textwhite" style="margin-top:5px;">Vote for<br>cute dogs!</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- 주요 뉴스 -->
+					<div style="width:587px;" class="bor-right">
+						<div style="padding-left: 20px; padding-top: 12px; padding-right:20px;">
+							<p class="font20 noto700" style="font">Main News</p>
+
+							<!-- 뉴스01 -->
+							<div style="margin-top:17px; padding-bottom: 5px;" class="bor-bottom">
+								<p class="font20 noto700">[D-10] ‘Dog vs Cat election’
+								</p>
+								<div class="flex" style="margin-top:5px;">
+									<div style="width:251px;">
+										<img src="img/mainnews1.png" style="width:251px; padding-top: 5px;">
+									</div>
+
+									<!-- 노란색 강조1-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 162px;"></div>
+									</div>
+
+									<!-- 노란색 강조2-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink2" style="top: 223px;"></div>
+									</div>
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="mainnews">[D-10] ‘Dog vs Cat election’ is just around the corner</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px">DogNews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="mainnews">The opening of campaign</p>
+										<p class="font12 textgray mainpress" style="padding-top: 4px;">WoofNews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="mainnews">The first day of an official campaign
+										</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px">MEOW</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 뉴스02 -->
+							<div class="bor-bottom margin-t-10"style=" padding-bottom: 5px;">
+								<p class="font20 noto700">
+									Dog bit Pedestrian
+								</p>
+
+								<div class="flex" style="margin-top:5px;">
+									<div style="width:251px; margin-top: 5px;">
+										<img src="img/mainnews2.png" style="width:251px;">
+									</div>
+
+									<!-- 노란색 강조3 -->
+									<div>
+									<div id="mtbinfo" class="absolute" style="height: 49px; width:295px; top: 432px; left:442px; background-color:#FFCC00;"></div>
+									</div>
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="font15 mainnews">Repeated dog bites... What's the solution?</p>
+										<p class="textgray font12 mainpress" style="padding-top: 28px;">MeowNews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Dog expert said, "It's not dog's fault!"
+										</p>
+										<p class="textgray mainpress font12" style="padding-top: 28px;">MeongNEWS</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Victim got severely injured</p>
+										<p class="textgray mainpress font12" style=" padding-top: 4px;">Dailymeow</p>
+										</div>
+
+										
+									</div>
+								</div>
+							</div>
+							<!-- 뉴스03 -->
+							<div class="margin-t-10">
+								<p class="font20 noto700">
+								고양이 할큄사건 진실은?
+								</p>
+								<div class="flex" style="margin-top:5px;">
+									<!-- 뉴스03 이미지 -->
+									<div class="relative"style="width:251px; margin-top: 5px;">
+										<div id="mainnews3-1">
+											<img src="img/mainnews3.png"  style="width:251px;">
+										</div>
+										<div id="mainnews3-2" class="absolute" style="left: 0px; top: 0;">
+											<img src="img/mind-news.png"  style="width:251px;">
+											<p class="font-e font18 noto700 absolute txtcenter" style="top:57px; left: 10px; width:231px;">This is why I can't trust the press</p>
+										</div>
+									</div>
+
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="font15 mainnews">The importance of Fact Checking</p>
+										<p class="textgray mainpress font12" style="padding-top: 28px;">Nyannews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Meow Party, "Stop spreading fake news."
+										</p>
+										<p class="textgray mainpress font12" style="padding-top: 28px;">Dailymeow</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="mainnews font15">What's the truth?</p>
+										<p class="textgray mainpress font12" style=" padding-top: 4px;">Dailymeow</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 실시간 인기뉴스+광고 -->
+					<div style="width:315px;">
+						<div class="marginauto" style="width:288px; margin-top: 57px;;">
+							<p class="font20 noto500">Ranking News</p>
+							<div class="margin-t-10 bor-all" style="width:288px;">
+								<div style="padding-top: 10px; padding-left:10px; padding-bottom: 10px;">
+									<ol class="font15">1. [D-10] ‘Dog vs Cat election’ is just around the corner</ol>
+									<ol class="font15">2. Meow Party, "Stop spreading fake news."</ol>
+									<ol class="font15">3. Repeated dog bites... What's the solution?</ol>
+									<ol class="font15">4. Dog expert said, "It's not dog's fault!"</ol>
+									<ol class="font15">5. No victim, just Fake news. Why?</ol>
+									<ol class="font15">6. The first day of an official campaign</ol>
+									<ol class="font15">7. [Live] Puppy Party’s ‘Kim Meong Moong’ campaign site</ol>
+									<ol class="font15">8. The first day of the ‘Dog vs Cat election’ campaign</ol>
+									<ol class="font15">9. [Breaking News] Cat seriously injured a man by scratching</ol>
+									<ol class="font15">10. The opening of campaign</ol>
+
+									
+								</div>
+							</div>
+							<p class="font18 margin-t-10">Subscribed</p>
+							<div class="flex margin-t-10" style="width: 288px; flex-wrap: wrap;">
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">DogNews</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">BOWWOW</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">DailyDog</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">MeongNEWS</p></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			</div>
+
+		</div>	
+	</section>
+
+	<section class="black">
+		<div class="width1 black h35 marginauto bor-lr-w">
+			<div class="width-h h35 bor-lr-w absolute" style="left:calc(50% - 310px);"></div>
+		</div>
+	</section>
+
+	<!-- 9페이지 -->
+	<section id="news2" class="black">
+		<!-- 맞춤형뉴스 -->
+		<div class="height1 black relative marginauto width1 bor-lr-w">
+			<div class="width-h height1 bor-lr-w absolute" style="left:calc(50% - 310px);"></div>
+			<!-- 말풍선 -->
+			<img src="img/ai3.png" class="aiballoon">
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon">
+				<div class="balloontxt">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					How about this? Do you like it?
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<img src="img/me3.png" class="meballoon" style="z-index:3">
+				<div class="balloontxt" style="bottom: 0px; right: 0; z-index:3;시">
+					<p class="msg txtcenter" style="padding-top:53px;">Yes! Now I can trust all news.</p>
+				</div>
+			</div>
+
+			<!-- 웹+흰바탕 -->
+			<img src="img/web.png" class="web absolute">
+			<div class="white absolute" style="width:1136px; height: 878px; top:calc(50% - 439px); left:calc(50% - 568px); z-index: 0;"></div>
+
+			<!-- 밑에 선 -->
+			<div class="absolute bor-lr-w height1" style="width:620px; height: 83px; bottom:0; left: calc(50% - 310px);"></div>
+
+			<div class="webline1 flex relative" style="border: none;">
+						<p class="font25" style="padding-top: 128px;"></p>
+						<img src="img/search.png" style="width:57px; height:57px; position: absolute;right:0;bottom: 0;">
+			</div>
+
+			<!-- 뉴스+검색창 -->
+			<div class="width0 absolute" style="z-index:2; left:calc(50% - 531px);">
+				<!-- 메뉴 -->
+				<div class="flex marginauto width0" style="height:44px; display: block; margin-top: 0px; border: black solid 1px">
+					<nav>
+						<li class="font20">All</li>
+						<li class="font20">Politics</li>
+						<li class="font20">Business</li>
+						<li class="font20">Society</li>
+						<li class="font20">Culture</li>
+						<li class="font20">World</li>
+						<li class="font20">Science</li>
+						<li class="font20" style="background: black; color: white;">My News</li>
+					</nav>
+				</div>
+				<!-- 뉴스 칸 -->
+				<div class="flex width0" style="margin-top:15px;">
+					<!-- 오늘날씨+광고 -->
+					<div class="bor-all" style="width:160px;">
+						<div style="padding-left: 15px; padding-top: 12px;">
+							<p class="font20 noto700" style="font">20XX.05.14</p>
+							<p class="font18 noto500" style="margin-top:17px;">Weather</p>
+							<div class="relative margin-t-10">
+								<img src="img/weather.png" style="width:126px;">
+								<p class="absolute font15 textwhite" style="z-index:2; bottom: 20px; left:33px;"> Cloudy</p>
+							</div>
+							<p class="font20 margin-t-10">Fine dust</p>
+							<div class="bor-all margin-t-10" style=" width: 126px; height:34px;">
+								<div class="marginauto flex" style="width:90px;">
+									<div>
+										<img src="img/weather2.png" style="width: 41px;">
+									</div>
+									<div style="margin-top:5px; margin-left: 10px;margin-right: 10px;">
+										<p class="font15">Bad</p>
+									</div>
+								</div>
+							</div>
+							<div style="width:126px;" class="txtright">
+								<p class="font12 textgray">More</p>
+							</div>
+
+							<div class="bor-all margin-t-10 margin-b-10" style="background-image:url(img/weather-ad.png); background-size: cover; width:126px; height: 266px;">
+								<div class="margin-t-10"style="margin-left: 5px;">
+									<p class="font18 textwhite">가. Kim Meong Moong</p>
+									<p class="font12 textwhite" style="margin-top:5px;">Vote for<br>cute dogs!</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- 주요 뉴스 -->
+					<div style="width:587px;" class="bor-right">
+						<div style="padding-left: 20px; padding-top: 12px; padding-right:20px;">
+							<p class="font20 noto700" style="font">Main News</p>
+							<!-- 뉴스01 -->
+							<div style="margin-top:17px; padding-bottom: 5px;" class="bor-bottom">
+								<p class="font20 noto700">[D-10] ‘Dog vs Cat election’
+								</p>
+								<div class="flex" style="margin-top:5px;">
+									<div style="width:251px;">
+										<img src="img/mainnews1.png" style="width:251px; padding-top: 5px;">
+									</div>
+
+									<!-- 노란색 강조1-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 162px;"></div>
+									</div>
+
+									<!-- 노란색 강조2-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink2" style="top: 223px;"></div>
+									</div>
+
+									<!-- 노란색 강조3-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 262px;"></div>
+									</div>
+
+									<!-- 노란색 강조4 -->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 369px;"></div>
+									</div>
+
+									<!-- 노란색 강조5-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 430px;"></div>
+									</div>
+
+									<!-- 노란색 강조6-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink2" style="top: 489px;"></div>
+									</div>
+
+									<!-- 노란색 강조4 -->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 582px;"></div>
+									</div>
+
+									<!-- 노란색 강조5-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink1" style="top: 643px;"></div>
+									</div>
+
+									<!-- 노란색 강조6-->
+									<div>
+									<div id="mtbinfo" class="absolute newsblink2" style="top: 701px;"></div>
+									</div>
+
+
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="mainnews font15">[D-10] ‘Dog vs Cat election’ is just around the corner</p>
+										<p class="textgray mainpress font12" style="padding-top: 28px">DogNews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">The opening of campaign</p>
+										<p class="font12 textgray mainpress" style="padding-top: 4px;">WoofNews</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">[Live] Puppy Party’s ‘Kim Meong Moong’ campaign site
+										</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px">DailyDog</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 뉴스02 -->
+							<div class="bor-bottom margin-t-10"style=" padding-bottom: 5px;">
+								<p class="font20 noto700">
+									고양이 할퀴어 피해자 중상
+								</p>
+								<div class="flex" style="margin-top:5px;">
+									<div style="width:251px; margin-top: 5px;">
+										<img src="img/mainnews4.png" style="width:251px;">
+									</div>
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="font15 mainnews">[Breaking News] Cat seriously injured a man by scratching</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px;">MeongNEWS</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">A pedestration suddenly attacked..
+										</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px;">BOWWOW</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Cat.. Is this okay?</p>
+										<p class="font12 textgray mainpress" style=" padding-top: 4px;">DogNews</p>
+										</div>
+
+										
+									</div>
+								</div>
+							</div>
+							<!-- 뉴스03 -->
+							<div class="margin-t-10">
+								<p class="font20 noto700">
+								[Fact Check] Dog bit pedestrian?
+								</p>
+								<div class="flex" style="margin-top:5px;">
+									<div style="width:251px; margin-top: 5px;">
+										<img src="img/mainnews2.png" style="width:251px;">
+									</div>
+
+									<!-- 기사 헤드라인 -->
+
+									<div class="headlines">
+										<div class="flex">
+										<p class="font15 mainnews">Dog expert said, "It's not dog's fault!"</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px;">MeongNEWS</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Puppy Party said violator should be punished strictly
+										</p>
+										<p class="font12 textgray mainpress" style="padding-top: 28px;">DailyDog</p>
+										</div>
+
+										<div class="flex" style="margin-top:15px;">
+										<p class="font15 mainnews">Dog bite accident Fact check</p>
+										<p class="font12 textgray mainpress" style=" padding-top: 4px;">Dailymeow</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 실시간 인기뉴스+광고 -->
+					<div style="width:315px;">
+						<div class="marginauto" style="width:288px; margin-top: 57px;;">
+							<p class="font20 noto500">Popular news in subscription</p>
+							<div class="margin-t-10 bor-all" style="width:288px; background-color: #ffcc00;">
+								<div style="padding-top: 10px; padding-left:10px; padding-bottom: 10px;">
+									<ol class="font15">1. [D-10] ‘Dog vs Cat election’ is just around the corner</ol>
+									<ol class="font15">2. Dog expert said, "It's not dog's fault!"</ol>
+									<ol class="font15">3. [Live] Puppy Party’s ‘Kim Meong Moong’ campaign site</ol>
+									<ol class="font15">4. The opening of campaign</ol>
+									<ol class="font15">5. [Breaking News] Cat seriously injured a man by scratching</ol>
+									<ol class="font15">6. A pedestrian suddenly attacked...</ol>
+									<ol class="font15">7. The Importance of Fact Check</ol>
+									<ol class="font15">8.[정정보도] 야옹당 대표 과거 논란 정정합니다.</ol>
+									<ol class="font15">9. The opening of campaign</ol>
+									<ol class="font15">10. [Live] Campaign site</ol>
+
+									
+								</div>
+							</div>
+							<p class="font18 margin-t-10">Subscribed</p>
+							<div class="flex margin-t-10" style="width: 288px; flex-wrap: wrap;">
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">DogNews</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">BOWWOW</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">DailyDog</p></div>
+								<div id="press" class="pressbutton" style="margin-right:5px;"><p class="font18 press">MeongNEWS</p></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>		
+	</section>
+
+	<!-- 10페이지 -->
+	<section class="black">
+		<!-- 구덩이 -->
+		<div class="hi height3 relative marginauto width1 bor-lr-w" style="background:none">
+
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon" style="left:70px;">
+				<div class="balloontxt" style="left:70px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					I found new content you might like.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<img src="img/me3.png" class="meballoon" style="z-index:3; top:130px; right:70px;">
+				<div class="balloontxt" style="top: 130px; right: 70px; z-index:3;">
+					<p class="msg txtcenter" style="padding-top:62px;">How did you know my mind? It's amazing.</p>
+				</div>
+			</div>
+
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon" style="left:130px; top: 242px;">
+				<div class="balloontxt" style="left:130px; top:242px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					Don't you need this information?
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<img src="img/me3.png" class="meballoon" style="z-index:5; top:360px; right:130px;">
+				<div class="balloontxt" style="top: 355px; right: 130px; z-index:5;">
+					<p class="msg txtcenter" style="padding-top:62px;">
+						How did you read my brain? Awesome!
+					</p>
+				</div>
+			</div>
+
+			<div class="absolute" style="z-index: 4;">
+				<img src="img/ai3.png" class="aiballoon" style="left:200px; top: 435px;">
+				<div class="balloontxt" style="left:200px; top:435px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					I think you might like this one.
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<img src="img/me3.png" class="meballoon" style="z-index:3; top:510px; right:200px;">
+				<div class="balloontxt" style="top: 510px; right: 200px; z-index:3;">
+					<p class="msg txtcenter" style="padding-top:62px;">
+					Cool! I love it.
+					</p>
+				</div>
+			</div>
+
+			<div class="absolute" style="z-index: 4;">
+				<img src="img/ai3.png" class="aiballoon" style="left:314px; top: 735px;">
+				<div class="balloontxt" style="left:314px; top:715px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					Great.<br>I'm gonna make your customized world for you.
+					</p>
+				</div>
+			</div>
+
+
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon" style="left:314px; top:2330px;">
+				<div class="balloontxt" style="left:314px; top:2330px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 62px;">
+					How do you feel?
+					</p>
+				</div>
+			</div>
+
+			<div class="absolute" style="z-index: 3;">
+				<img src="img/ai3.png" class="aiballoon" style="left:314px; top:2475px;">
+				<div class="balloontxt" style="left:314px; top:2475px;">
+					<p class="msg txtcenter aimsg" style="padding-top: 47px;">
+					If you want to know what happened,
+					<br>press the button below.
+					</p>
+				</div>
+			</div>
+
+			<a href="https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles?language=ko">
+				<div class="txtcenter bor-all-w bor-25 black msg2 absolute" style="top: 2872px; right: 343px; width:130px;" id="ynbutton">
+							<p class="yn-margin font20">GO</p>
+				</div>
+			</a>
+
+			<div class="absolute bor-lr-w height1 width-h" style=" top:0; left: calc(50% - 310px);">
+				<img src="img/falling1.gif" style="width:610px; position: absolute; top: 83px;">
+			</div>
+			<div class="absolute bor-lr-w height1 width-h" style=" top:1024px; left: calc(50% - 310px);">
+				<img src="img/falling2.gif" style="width:610px;">
+			</div>
+			<div class="absolute bor-lr-w bor-bottom-w width-h" style="height: 884px;top:2048px; left: calc(50% - 310px);">
+		</div>	
+	</section>
+</body>
+</html>
